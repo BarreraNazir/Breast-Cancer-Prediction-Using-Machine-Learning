@@ -1,5 +1,4 @@
 # Breast Cancer Prediction Using Machine Learning
- Predicting the type of breast cancer (Malignant or Benign)
 
 **Problem Identification**:
 
