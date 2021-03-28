@@ -1,32 +1,49 @@
-# Breast Cancer Detector
+# Breast Cancer Prediction Using Machine Learning
  Predicting the type of breast cancer (Malignant or Benign)
 
-Overview
+**Problem Identification**:
 
-Breast cancer is the most common form of cancer among women and the second most common cancer in the world. Survival is directly related to stage at diagnosis, as can be seen by a 98% 10-year survival rate for patients with stages 0 and I disease compared with a 65% 10-year survival rate for patients with stage III disease. To improve survival in this disease, more patients need to be identified at an early stage. Therefore, we evaluated existing and emerging technologies used for breast cancer screening and detection to identify areas for potential improvement. 
+Breast cancer is the most common malignancy among women, accounting for nearly 1 in 3 cancers diagnosed among women in the United States, and it is the second leading cause of cancer death among women. Breast Cancer occurs as a results of abnormal growth of cells in the breast tissue, commonly referred to as a Tumor. A tumor does not mean cancer - tumors can be benign (not cancerous), pre-malignant (pre-cancerous), or malignant (cancerous). Tests such as MRI, mammogram, ultrasound and biopsy are commonly used to diagnose breast cancer performed.
 
-This task consist of three phases
+**Goal**:
 
-Breast Cancer Dataset:
+The goal is to classify whether the breast cancer patient is diagnosed as benign or malignant. To achieve this we have used machine learning classification methods to fit a function that can predict the class of new patient.
 
-1 Dataset overview:
+**Getting Started**
 
-     The breast cancer dataset is a classic and binary classification. This data set includes 201 instances of one class and 85 instances of another class. The instances are described by 9 attributes, some of which are linear and some are nominal.
+The project is broken down into the following steps:
 
-2 Pre-processing:
+1) Importing Libraries and Data
+2) Data Pre-Processing
+3) Data Visualization
+4) Model Building
 
-     The dataset is entirely clean, no corrupt data. In this step, the class lebel 'diagnosis' is converted into categorical with the help of LabelEncoder.
+1) Importing Libraries and Dataset:
 
-3 Classification:
-
-     It predict numeric labels, to categorize patient as either malignant or benign. The classification include two steps:
- 
-    - Building the classifier or model:
- 
-         The classifier is build from the training set including the data of dependent and independent variable. 
+ 1.1) Libraries:
+     Used Pandas, NumPy, Matplotlib, Seaborn and Sklearn Libraries 
      
-    - Using classifier for classification:
- 
-         The classifier is used for classification. Here the test data is used to estimate the accuracy of models. The classifier can be applied to new data if results is      considered as acceptable. The four classifier models were used to diagnose the patient, namely KNN, DT, SGD, and SVM. Later on, the results of all classifiers were compared to generate 100 % results. 
-     
+ 1.2) Dataset:
+     The Breast Cancer datasets is available machine learning repository maintained by the University of California, Irvine. The dataset contains 569 samples of malignant and benign tumor cells. The first two columns in the dataset store the unique ID numbers of the samples and the corresponding diagnosis (M=malignant, B=benign), respectively. The columns 3-32 contain 30 real-value features that have been computed from digitized images of the cell nuclei, which can be used to build a model to predict whether a tumor is benign or malignant.
 
+2) Data Pre-Processing:
+
+    Data preprocessing is a crucial step for any data analysis problem. It is often a very good idea to prepare your data in such way to best expose the structure of the problem to the machine learning algorithms that you intend to use. Here in this model it involves:
+
+ 2.1) Label Encoder
+   
+   After encoding the class labels(diagnosis) in an array, the malignant tumors are now represented as class 1 (i.e prescence of cancer cells) and the benign tumors are represented as class 0 (i.e no cancer cells detection), respectively, illustrated by calling the transform method of LabelEncorder on two dummy variables
+     
+3) Data Visualization:
+
+   It is essential to have an overall picture of data Basic statistical descriptions used to identify properties of the data and highlight which data values should be treated as noise or outliers. Here two approaches used to explore the data:
+   
+   3.1) Descriptive statistics:
+          It's the process of condensing key characteristics of the dataset into simple numeric metrics. Some of the common metrics used are mean, symmetry and correlation.
+   
+   3.2) Visualization:
+          It is the process of projecting the data, or parts of it, into Cartesian space or into abstract images. In the data mining process, data exploration is leveraged in many different steps including preprocessing, modeling, and interpretation of results.
+          
+4) Model Building: 
+   
+   The simplest method to evaluate the performance of a machine learning algorithm is to use different training and testing datasets. Here I split the available data into a training set and a testing set (70% training, 30% test).Train the algorithm on the first part, then make predictions on the another part, and then compare the classifier results namely K-NN, Decision Tree, Logistic Regression, and Support Vector Machine. Among all, K-NN provide better accuracy results. The size of the split can depend on the size and specifics of your dataset, although it is common to use 67% of the data for training and the remaining 33% for testing. 
