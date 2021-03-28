@@ -17,32 +17,37 @@ The project is broken down into the following steps:
 3) Data Visualization
 4) Model Building
 
+
 1) Importing Libraries and Dataset:
 
  1.1) Importing Libraries:
+     
      Used Pandas, NumPy, Matplotlib, Seaborn and Sklearn Libraries 
      
  1.2) Dataset:
+     
      The Breast Cancer datasets is available machine learning repository maintained by the University of California, Irvine. The dataset contains 569 samples of malignant and benign tumor cells. The first two columns in the dataset store the unique ID numbers of the samples and the corresponding diagnosis (M=malignant, B=benign), respectively. The columns 3-32 contain 30 real-value features that have been computed from digitized images of the cell nuclei, which can be used to build a model to predict whether a tumor is benign or malignant.
 
 2) Data Pre-Processing:  
 
-    Data preprocessing is a crucial step for any data analysis problem. It is often a very good idea to prepare your data in such way to best expose the structure of the problem to the machine learning algorithms that you intend to use. Here in this model it involves:
+       Data preprocessing is a crucial step for any data analysis problem. It is often a very good idea to prepare your data in such way to best expose the structure of the problem to the machine learning algorithms that you intend to use. Here in this model it involves:
 
  2.1) Label Encoder
    
-   After encoding the class labels(diagnosis) in an array, the malignant tumors are now represented as class 1 (i.e prescence of cancer cells) and the benign tumors are represented as class 0 (i.e no cancer cells detection), respectively, illustrated by calling the transform method of LabelEncorder on two dummy variables
+      After encoding the class labels(diagnosis) in an array, the malignant tumors are now represented as class 1 (i.e prescence of cancer cells) and the benign tumors are represented as class 0 (i.e no cancer cells detection), respectively, illustrated by calling the transform method of LabelEncorder on two dummy variables
      
 3) Data Visualization:
 
-   It is essential to have an overall picture of data Basic statistical descriptions used to identify properties of the data and highlight which data values should be treated as noise or outliers. Here two approaches used to explore the data:
+       It is essential to have an overall picture of data Basic statistical descriptions used to identify properties of the data and highlight which data values should be treated as noise or outliers. Here two approaches used to explore the data:
    
-   3.1) Descriptive statistics:
-          It's the process of condensing key characteristics of the dataset into simple numeric metrics. Some of the common metrics used are mean, symmetry and correlation.
+       3.1) Descriptive statistics:
+          
+               It's the process of condensing key characteristics of the dataset into simple numeric metrics. Some of the common metrics used are mean, symmetry and correlation.
    
-   3.2) Visualization:
-          It is the process of projecting the data, or parts of it, into Cartesian space or into abstract images. In the data mining process, data exploration is leveraged in many different steps including preprocessing, modeling, and interpretation of results.
+       3.2) Visualization:
+       
+               It is the process of projecting the data, or parts of it, into Cartesian space or into abstract images. In the data mining process, data exploration is leveraged in many different steps including preprocessing, modeling, and interpretation of results.
           
 4) Model Building: 
    
-   The simplest method to evaluate the performance of a machine learning algorithm is to use different training and testing datasets. Here I split the available data into a training set and a testing set (70% training, 30% test).Train the algorithm on the first part, then make predictions on the another part, and then compare the classifier results namely K-NN, Decision Tree, Logistic Regression, and Support Vector Machine. Among all, K-NN provide better accuracy results. The size of the split can depend on the size and specifics of your dataset, although it is common to use 67% of the data for training and the remaining 33% for testing. 
+       The simplest method to evaluate the performance of a machine learning algorithm is to use different training and testing datasets. Here I split the available data into a training set and a testing set (70% training, 30% test).Train the algorithm on the first part, then make predictions on the another part, and then compare the classifier results namely K-NN, Decision Tree, Logistic Regression, and Support Vector Machine. Among all, K-NN provide better accuracy results. The size of the split can depend on the size and specifics of your dataset, although it is common to use 67% of the data for training and the remaining 33% for testing. 
