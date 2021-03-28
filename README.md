@@ -19,7 +19,7 @@ The project is broken down into the following steps:
 
 1) Importing Libraries and Dataset:
 
- 1.1) Libraries:
+ 1.1) Importing Libraries:
      Used Pandas, NumPy, Matplotlib, Seaborn and Sklearn Libraries 
      
  1.2) Dataset:
